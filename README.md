@@ -1,8 +1,8 @@
 # EcoTech Solutions - E-commerce Platform
 
-A modern, full-stack e-commerce platform for refurbished electronics, built for EcoTech Solutions. This application provides a seamless shopping experience with secure authentication, real-time payments, and robust content management.
+A modern, full-stack e-commerce platform for refurbished electronics, built for EcoTech Solutions. This application provides a seamless shopping experience with secure authentication, real-time payments, and robust content management. 
 
-![EcoTech Solutions Preview](./public/homepage.png)
+![EcoTech Solutions Preview](./public/homepage.PNG)
  
 ## 🚀 Features
 
@@ -20,11 +20,11 @@ A modern, full-stack e-commerce platform for refurbished electronics, built for 
 -   **Framework**: [Next.js 16](https://nextjs.org/) (App Router)
 -   **Language**: TypeScript
 -   **Styling**: Tailwind CSS, Shadcn/ui
--   **Database/CMS**: [Sanity](https://www.sanity.io/) Sanity
--   **Authentication**: [Clerk](https://clerk.com/) Clerk
--   **Website Payments**: [Stripe](https://stripe.com/) Stripe
--   **Email Notifications**: [Resend](https://resend.com/) Resend 
--   **AI Chatbot**: [Google Gemini](https://aistudio.google.com/welcome) Google Gemini AI
+-   **Database/CMS**: [Sanity](https://www.sanity.io/) 
+-   **Authentication**: [Clerk](https://clerk.com/) 
+-   **Website Payments**: [Stripe](https://stripe.com/) 
+-   **Email Notifications**: [Resend](https://resend.com/) 
+-   **AI Chatbot**: [Google Gemini](https://aistudio.google.com/welcome) 
 --- 
 
 ## 🏁 Getting Started
@@ -163,7 +163,7 @@ NODE_ENV = "development"
 2. Create a free account or sign in
 3. Create a new project:
    ```bash
-  npm create sanity@latest -- --template clean --create-project "My Sanity Project" --dataset production --typescript
+   npm create sanity@latest -- --template clean --create-project "My Sanity Project" --dataset production --typescript 
    ```
 4. Get your credentials:
    - Go to [Sanity Management](https://www.sanity.io/manage)
