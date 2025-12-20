@@ -176,6 +176,7 @@ NODE_ENV = "development"
 
 📚 [Sanity Documentation](https://www.sanity.io/docs)
 
+---
 
 ### 🔐 Clerk Authentication
 
@@ -198,6 +199,7 @@ NODE_ENV = "development"
 
 📚 [Clerk Documentation](https://clerk.com/docs)
 
+---
 
 ### 💳 Stripe Payment Gateway
 
@@ -235,7 +237,7 @@ NODE_ENV = "development"
 
 📚 [Google Gemini Documentation](https://ai.google.dev/gemini-api/docs)
 
-
+--- 
 
 ### 📧 Email Configuration (Resend)
 
