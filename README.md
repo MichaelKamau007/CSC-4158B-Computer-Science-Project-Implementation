@@ -359,7 +359,7 @@ npx sanity@latest dataset import seed.tar.gz
 | **Stripe**        | 19.2.0   | Payments         | [Docs](https://stripe.com/docs)              |
 | **Framer Motion** | 12.23.19 | Animations       | [Docs](https://www.framer.com/motion/)       |
 | **Zustand**       | 5.0.8    | State management | [Docs](https://zustand-demo.pmnd.rs/)        |
-| **Google Gemini** | 0.24.1   | Chatbot          | [Docs](https://gemini.google.dev/gemini-api/docs)|
+| **Google Gemini** | 0.24.1   | Chatbot          | [Docs](https://ai.google.dev/gemini-api/docs)|
 | **Resend**        | 6.5.2   | Email service    | [Docs](https://resend.com/docs/introduction)|
 
 ---
