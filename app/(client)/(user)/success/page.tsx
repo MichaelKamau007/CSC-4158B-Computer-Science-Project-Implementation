@@ -5,7 +5,7 @@ import { useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { MY_ORDERS_QUERYResult } from "@/sanity.types";
+import { MY_ORDERS_QUERY_RESULT } from "@/sanity.types";
 import { client } from "@/sanity/lib/client";
 import { defineQuery } from "next-sanity";
 import { useUser } from "@clerk/nextjs";
@@ -16,7 +16,7 @@ import PriceFormatter from "@/components/PriceFormatter";
 import { format } from "date-fns";
 
 const SuccessPage = () => {
-  const [orders, setOrders] = useState<MY_ORDERS_QUERYResult>([]);
+  const [orders, setOrders] = useState<MY_ORDERS_QUERY_RESULT>([]);
   const [showAllOrders, setShowAllOrders] = useState(false);
   const searchParams = useSearchParams();
   const orderNumber = searchParams.get("orderNumber");
@@ -40,7 +40,7 @@ const SuccessPage = () => {
 
       try {
         const ordersData = await client.fetch(query, { userId });
-        setOrders(ordersData as MY_ORDERS_QUERYResult);
+        setOrders(ordersData as MY_ORDERS_QUERY_RESULT);
       } catch (error) {
         console.error("Error fetching orders:", error);
       }

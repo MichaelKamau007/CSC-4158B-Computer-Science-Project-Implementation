@@ -9,7 +9,7 @@ import { productType } from "@/constants";
 import NoProductAvailable from "./product/NoProductAvailable";
 import { Grid3X3, LayoutGrid, List, Filter, SortAsc, Eye } from "lucide-react";
 import Container from "./Container";
-import { ALL_PRODUCTS_QUERYResult } from "@/sanity.types";
+import { ALL_PRODUCTS_QUERY_RESULT } from "@/sanity.types";
 import { Button } from "@/components/ui/button";
 import {
   Select,
@@ -35,9 +35,9 @@ type SortOption =
   | "newest";
 
 const ProductGrid = () => {
-  const [products, setProducts] = useState<ALL_PRODUCTS_QUERYResult>([]);
+  const [products, setProducts] = useState<ALL_PRODUCTS_QUERY_RESULT>([]);
   const [filteredProducts, setFilteredProducts] =
-    useState<ALL_PRODUCTS_QUERYResult>([]);
+    useState<ALL_PRODUCTS_QUERY_RESULT>([]);
   const [loading, setLoading] = useState(false);
   const [selectedTab, setSelectedTab] = useState(productType[0]?.title || "");
   const [viewMode, setViewMode] = useState<ViewMode>("grid-5");

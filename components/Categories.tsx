@@ -12,4 +12,4 @@ const Categories = ({ categories }: Props) => {
   );
 };
 
-export default Categories;
+export default Categories; 

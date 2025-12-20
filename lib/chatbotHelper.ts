@@ -17,9 +17,9 @@ export interface ProductInfo {
 export async function searchProducts(query: string): Promise<ProductInfo[]> {
   try {
     const searchQuery = `*[_type == "product" && (
-      name match $query || 
-      description match $query ||
-      intro match $query
+      name match $searchTerm || 
+      description match $searchTerm ||
+      intro match $searchTerm
     )][0...5]{
       name,
       price,
@@ -32,8 +32,8 @@ export async function searchProducts(query: string): Promise<ProductInfo[]> {
       "slug": slug.current
     }`;
 
-    const products = await client.fetch(searchQuery, {
-      query: `*${query}*`,
+    const products = await client.fetch<ProductInfo[]>(searchQuery, {
+      searchTerm: `*${query}*`,
     });
 
     return products;
@@ -62,7 +62,7 @@ export async function getProductsByCategory(
       "slug": slug.current
     }`;
 
-    const products = await client.fetch(categoryQuery, {
+    const products = await client.fetch<ProductInfo[]>(categoryQuery, {
       category: `*${categoryName}*`,
     });
 
@@ -90,7 +90,7 @@ export async function getFeaturedProducts(): Promise<ProductInfo[]> {
       "slug": slug.current
     }`;
 
-    const products = await client.fetch(featuredQuery);
+    const products = await client.fetch<ProductInfo[]>(featuredQuery);
 
     return products;
   } catch (error) {
@@ -118,7 +118,7 @@ export async function getProductBySlug(
       "slug": slug.current
     }`;
 
-    const product = await client.fetch(productQuery, { slug });
+    const product = await client.fetch<ProductInfo | null>(productQuery, { slug });
 
     return product || null;
   } catch (error) {
@@ -136,7 +136,7 @@ export async function getCategories(): Promise<string[]> {
       title
     }`;
 
-    const categories = await client.fetch(categoriesQuery);
+    const categories = await client.fetch<{ title: string }[]>(categoriesQuery);
 
     return categories.map((cat: { title: string }) => cat.title);
   } catch (error) {

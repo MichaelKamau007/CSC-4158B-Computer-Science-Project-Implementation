@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useMemo } from "react";
-import { BRANDS_QUERYResult, Category, Product } from "@/sanity.types";
+import { BRANDS_QUERY_RESULT, Category, Product } from "@/sanity.types";
 import ProductCard from "./ProductCard";
 import { motion, AnimatePresence } from "motion/react";
 import {
@@ -35,7 +35,7 @@ import { Slider } from "./ui/slider";
 interface Props {
   initialProducts: Product[];
   categories: Category[];
-  brands: BRANDS_QUERYResult;
+  brands: BRANDS_QUERY_RESULT;
 }
 
 type SortOption =

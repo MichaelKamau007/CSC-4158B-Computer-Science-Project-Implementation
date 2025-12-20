@@ -1,4 +1,4 @@
-import { Product, BRAND_QUERYResult } from "@/sanity.types";
+import { Product, BRAND_QUERY_RESULT } from "@/sanity.types";
 import {
   Accordion,
   AccordionContent,
@@ -8,7 +8,7 @@ import {
 
 interface ProductCharacteristicsProps {
   product: Product;
-  brand: BRAND_QUERYResult | null;
+  brand: BRAND_QUERY_RESULT | null;
 }
 
 const ProductCharacteristics = ({

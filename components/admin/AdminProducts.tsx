@@ -44,10 +44,10 @@ import {
 import { ProductsSkeleton } from "./SkeletonLoaders";
 import { Product } from "./types";
 import { safeApiCall, handleApiError } from "./apiHelpers";
-import { ADMIN_CATEGORIES_QUERYResult } from "@/sanity.types";
+import { ADMIN_CATEGORIES_QUERY_RESULT } from "@/sanity.types";
 
 interface AdminProductsProps {
-  initialCategories?: ADMIN_CATEGORIES_QUERYResult;
+  initialCategories?: ADMIN_CATEGORIES_QUERY_RESULT;
 }
 
 const AdminProducts: React.FC<AdminProductsProps> = ({
@@ -64,7 +64,7 @@ const AdminProducts: React.FC<AdminProductsProps> = ({
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [imageLoading, setImageLoading] = useState(false);
   const [categories, setCategories] =
-    useState<ADMIN_CATEGORIES_QUERYResult>(initialCategories);
+    useState<ADMIN_CATEGORIES_QUERY_RESULT>(initialCategories);
 
   const limit = 10;
 

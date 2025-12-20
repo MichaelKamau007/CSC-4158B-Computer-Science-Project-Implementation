@@ -4,8 +4,8 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
-  SINGLE_BLOG_QUERYResult,
-  OTHERS_BLOG_QUERYResult,
+  SINGLE_BLOG_QUERY_RESULT,
+  OTHERS_BLOG_QUERY_RESULT,
 } from "@/sanity.types";
 import { urlFor } from "@/sanity/lib/image";
 import {
@@ -37,7 +37,7 @@ const SingleBlogPage = async ({
   params: Promise<{ slug: string }>;
 }) => {
   const { slug } = await params;
-  const blog = (await getSingleBlog(slug)) as SINGLE_BLOG_QUERYResult | null;
+  const blog = (await getSingleBlog(slug)) as SINGLE_BLOG_QUERY_RESULT | null;
   if (!blog) return notFound();
 
   // Calculate reading time based on content length
@@ -391,7 +391,7 @@ const BlogSidebar = async ({ slug }: { slug: string }) => {
         <CardContent className="space-y-4">
           {blogs?.map(
             (
-              blogItem: OTHERS_BLOG_QUERYResult[0] & { publishedAt?: string },
+              blogItem: OTHERS_BLOG_QUERY_RESULT[0] & { publishedAt?: string },
               index: number
             ) => (
               <Link
